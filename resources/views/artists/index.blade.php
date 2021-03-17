@@ -7,7 +7,7 @@
         @foreach ($artist as $artist)
             <ul>
                 <li class='mb-5'>
-                <h4>{{$artist->name}} </h4> <br>
+                <a href="{{route('artists.show', $artist->id)}}"><h4>{{$artist->name}} </h4></a> <br>
                 Nato a : {{$artist->luogo_di_nascita}} <br>
                 Morto a : {{$artist->luogo_di_morte}} <br>
                 Opera: {{$artist->opere}}

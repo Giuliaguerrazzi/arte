@@ -1,0 +1,21 @@
+header {
+    background-color: #9a031e;
+    font-size: 20px;
+    nav {
+        
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    
+        a {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+           
+        }
+        
+    }
+   
+}
