@@ -5,20 +5,22 @@
     <div class="container">
 
 <h1 class='text-center'>Elenco Artisti</h1>
-@foreach ($artist as $artist)
+
     <ul>
-        <li class='mb-5'>
+    @foreach ($artist as $artist)
+        <li class='me-5 mb-5 my-5'>
         <a href="{{route('artists.show', $artist->id)}}">
             <h4>{{$artist->name}} </h4>
-            <img src="{{asset('../img/Caravaggio.jpg')}}" alt="">
+            <img src="{{$artist->image}}" alt="">
         </a> <br>
         Nato a : {{$artist->luogo_di_nascita}} <br>
         Morto a : {{$artist->luogo_di_morte}} <br>
-        Opera: {{$artist->opere}}
 
-        </li>            
+
+        </li> 
+    @endforeach              
     </ul>
-@endforeach
+
 </div>
     </div>
        

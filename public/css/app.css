@@ -30,6 +30,11 @@ header nav a {
   margin-right: 10px;
 }
 
+ul {
+  display: flex;
+  justify-content: center;
+}
+
 img {
   width: 100px;
 }
