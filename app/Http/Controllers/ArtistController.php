@@ -28,7 +28,7 @@ class ArtistController extends Controller
      */
     public function create()
     {
-        //
+        return view('artists.create');
     }
 
     /**
@@ -39,7 +39,26 @@ class ArtistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //assegniamo a data tutti i dati
+        $data = $request->all();
+
+        //validazione
+        $request->validate([
+            'name' => 'required',
+            'luogo_di_nascita' => 'required',
+            'luogo_di_morte' => 'required',
+            'opere' => 'required',
+            'image' => 'mimes:jpg,jpeg,png,bmp'
+        ]);
+
+        $newArtist = new Artist();
+        $newArtist->fill($data);
+
+        $newArtist->save();
+
+        return redirect()->route('homepage');
+    
+    
     }
 
     /**

@@ -5,7 +5,7 @@
     
     <a class="" aria-current="page" href="{{route('homepage')}}">Home</a>
       
-      
+    <a class="" aria-current="page" href="{{route('artists.create')}}">Crea nuovo artista</a>
        
  
 
